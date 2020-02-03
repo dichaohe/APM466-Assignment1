@@ -49,7 +49,7 @@ def ytm(bonds):
                         pv = []
                         #yr = year_fraction(date[i],input_dict)#year_fraction_dict
                         j = 0
-                        while True:#
+                        while True:
                                     if ytm == []:
                                                 break
                                     bond = bonds[j]
