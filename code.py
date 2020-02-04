@@ -173,7 +173,7 @@ def covariance_matrix(bonds):
 
 if __name__ == '__main__':
             bonds = pd.read_csv('data.csv')
-            #df = interpolate(data)
+            #df = interpolate(bonds)
             #df.to_csv('close_price.csv')
             ytm(bonds)
             spot_rate(bonds)
