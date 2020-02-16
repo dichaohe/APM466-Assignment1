@@ -116,7 +116,7 @@ def spot_rate(bonds):
                                                             condition = total_pv_one<pv
                                                 else:
                                                             condition = total_pv_one>pv
-                                                pv = present_value(fv,coupon,periods,spot_rate_one,yr,spot_rate_list,gap)
+                                                pv = present_value(fv,coupon,spot_rate_one,yr,spot_rate_list,gap)
                         plt.plot(yr_frac,bonds.iloc[:,i+32],label = i)
                         plt.ylim(0,0.05)
                         plt.legend()
