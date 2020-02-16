@@ -81,7 +81,6 @@ def ytm(bonds):
 
 def present_value(fv,coupon,rate,yr,spot_rate_list,gap):
             pv = 0
-            #periods = periods_dict[periods]
             if gap == False:
                         for i in range(10):
                                     total_pv = total_pv + coupon * math.exp(-yr[i]*spot_rate_list[i]/100)
