@@ -79,15 +79,15 @@ def ytm(bonds):
             plt.show()
             return ytm,bond_yield,yr_frac
 
-def present_value(fv,coupon,periods,rate,yr,spot_rate_list,gap):
+def present_value(fv,coupon,rate,yr,spot_rate_list,gap):
             pv = 0
             #periods = periods_dict[periods]
             if gap == False:
-                        for i in range(periods):
+                        for i in range(10):
                                     total_pv = total_pv + coupon * math.exp(-yr[i]*spot_rate_list[i]/100)
                         pv = pv + fv * math.exp(-yr[i+1]*rate)
             else:
-                        for i in range(periods - 1):
+                        for i in range(10 - 1):
                                     pv = pv + coupon * math.exp(-yr[i]*spot_rate_list[i]/100)
                         pv = pv + coupon * math.exp(-yr[i+1]*(spot_rate_list[-1]/100*rate)/2)
                         pv = pv + fv*math.exp(-yr[i+2]*rate)
